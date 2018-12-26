@@ -1,0 +1,42 @@
+<idea-plugin>
+    <id>com.skateboard.versionchecker</id>
+    <name>VersionChecker</name>
+    <version>1.0</version>
+    <vendor email="support@yourcompany.com" url="">YourCompany</vendor>
+
+    <description><![CDATA[
+     version checker
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="versioncheckgroup" popup="true" text="versioncheck">
+            <action id="com.skateboard.plugin"
+                    class="com.skateboard.versionchecker.VersionCheckAction"
+                    text="versionchecker"
+                    description="多module情况下合并依赖到versions.gradle">
+                <add-to-group group-id="ToolsMenu" anchor="first"/>
+            </action>
+        </group>
+    </actions>
+
+</idea-plugin>
